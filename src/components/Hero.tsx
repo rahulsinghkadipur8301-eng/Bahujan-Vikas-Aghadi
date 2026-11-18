@@ -143,27 +143,14 @@ export const Hero: React.FC<HeroProps> = ({
           />
         </div>
 
-        {/* Both Leaders' Names Arranged Legibly on Mobile Below Photograph */}
+        {/* Both Leaders' Names Arranged Legibly on Mobile Below Photograph (Aligned with portrait sides) */}
         <div className="w-full text-center space-y-2 pt-3">
           <div className="grid grid-cols-2 gap-2 pt-1 border-t border-slate-200/80">
-            {/* Left Leader: Hitendra Thakur */}
-            <div
-              onClick={() => onExploreLeader('hitendra-thakur')}
-              className="p-2 rounded-xl bg-slate-50/90 border border-slate-200 text-left cursor-pointer active:bg-blue-50"
-            >
-              <span className="text-[10px] font-bold text-[#EAB308] uppercase block font-mono">Founder</span>
-              <h2 className="text-sm font-black text-[#0220A8] leading-tight font-display">
-                HITENDRA THAKUR
-              </h2>
-              <p className="text-[10px] text-slate-600 font-marathi truncate mt-0.5">
-                माजी ५-वेळा आमदार
-              </p>
-            </div>
-
-            {/* Right Leader: Kshitij Thakur */}
-            <div
+            {/* Left Leader (matches left side of portrait): Kshitij Thakur */}
+            <button
+              type="button"
               onClick={() => onExploreLeader('kshitij-thakur')}
-              className="p-2 rounded-xl bg-slate-50/90 border border-slate-200 text-left cursor-pointer active:bg-blue-50"
+              className="p-2 rounded-xl bg-slate-50/90 border border-slate-200 text-left cursor-pointer active:bg-blue-50 hover:border-[#0220A8] transition-colors"
             >
               <span className="text-[10px] font-bold text-[#0220A8] uppercase block font-mono">132-Nalasopara</span>
               <h2 className="text-sm font-black text-[#0220A8] leading-tight font-display">
@@ -172,7 +159,22 @@ export const Hero: React.FC<HeroProps> = ({
               <p className="text-[10px] text-slate-600 font-marathi truncate mt-0.5">
                 माजी ३-वेळा आमदार
               </p>
-            </div>
+            </button>
+
+            {/* Right Leader (matches right side of portrait): Hitendra Thakur */}
+            <button
+              type="button"
+              onClick={() => onExploreLeader('hitendra-thakur')}
+              className="p-2 rounded-xl bg-slate-50/90 border border-slate-200 text-left cursor-pointer active:bg-blue-50 hover:border-[#0220A8] transition-colors"
+            >
+              <span className="text-[10px] font-bold text-[#EAB308] uppercase block font-mono">Founder · Vasai</span>
+              <h2 className="text-sm font-black text-[#0220A8] leading-tight font-display">
+                HITENDRA THAKUR
+              </h2>
+              <p className="text-[10px] text-slate-600 font-marathi truncate mt-0.5">
+                माजी ५-वेळा आमदार
+              </p>
+            </button>
           </div>
 
           <p className="text-xs font-black text-[#0220A8] font-marathi pt-1">
@@ -202,13 +204,13 @@ export const Hero: React.FC<HeroProps> = ({
 
       {/* =========================================================
           DESKTOP THREE-ZONE BALANCED COMPOSITION (>= lg screens: 1024px, 1280px, 1440px, 1920px)
-          - Left: HITENDRA THAKUR (Bold typography, role, verified badge, description, primary CTA)
+          - Left: KSHITIJ THAKUR (aligned with Kshitij on the left side of the portrait)
           - Centre: Prominent leadership photograph (/bva_leaders_clean.png)
-          - Right: KSHITIJ THAKUR (Consistent typography, role, verified badge, description, secondary CTA)
+          - Right: HITENDRA THAKUR (aligned with Hitendra on the right side of the portrait)
           ========================================================= */}
       <div className="hidden lg:flex bva-container-wide w-full relative z-10 items-center justify-between my-auto min-h-[calc(100vh-140px)] px-4">
         {/* =========================================================
-            ZONE 1 (LEFT WING): HITENDRA THAKUR
+            ZONE 1 (LEFT WING): KSHITIJ THAKUR
             ========================================================= */}
         <div
           style={{
@@ -220,51 +222,50 @@ export const Hero: React.FC<HeroProps> = ({
         >
           {/* Identity Tag */}
           <div className="flex items-center gap-2">
-            <BvaEmblem variant="badge" size={28} priority={true} />
             <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-blue-50 border border-blue-200 text-[#0220A8] text-[11px] font-bold uppercase tracking-wider">
-              <span className="w-2 h-2 rounded-full bg-[#FDF219] ring-2 ring-[#0220A8]" />
-              <span>133-Vasai · Founder</span>
+              <span className="w-2 h-2 rounded-full bg-[#0220A8] ring-2 ring-blue-300" />
+              <span>132-Nalasopara · Legislative</span>
             </div>
           </div>
 
           {/* Accent Line */}
-          <div className="w-12 h-1 bg-[#FDF219] rounded-full" />
+          <div className="w-12 h-1 bg-[#0220A8] rounded-full" />
 
-          {/* Prominent Name: HITENDRA THAKUR */}
+          {/* Prominent Name: KSHITIJ THAKUR */}
           <div className="space-y-0.5">
-            <h1 className="text-3xl sm:text-4xl xl:text-5xl 2xl:text-[54px] font-black text-[#0220A8] tracking-tight leading-[0.92] uppercase font-display">
-              HITENDRA
+            <h2 className="text-3xl sm:text-4xl xl:text-5xl 2xl:text-[54px] font-black text-[#0220A8] tracking-tight leading-[0.92] uppercase font-display">
+              KSHITIJ
               <br />
               <span className="text-slate-900">THAKUR</span>
-            </h1>
+            </h2>
             <p className="text-base sm:text-lg font-bold text-[#0220A8] font-marathi pt-1">
-              {content.hitendra.nameMr}
+              {content.kshitij.nameMr}
             </p>
           </div>
 
           {/* Verified Role Pill */}
           <div>
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-[#0220A8] text-xs font-bold shadow-2xs">
-              <CheckCircle2 className="w-3.5 h-3.5 text-[#EAB308]" />
-              <span>{currentLang === 'mr' ? 'संस्थापक · माजी ५-वेळा आमदार' : 'Founder · Former 5-Term MLA'}</span>
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-[#0220A8] text-xs font-bold shadow-2xs">
+              <CheckCircle2 className="w-3.5 h-3.5 text-[#0220A8]" />
+              <span>{currentLang === 'mr' ? 'माजी ३-वेळा आमदार (२००९–२०२४)' : 'Former 3-Term MLA (2009–2024)'}</span>
             </div>
           </div>
 
           {/* Supporting Sentence */}
           <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans max-w-xs">
             {currentLang === 'mr'
-              ? 'वसई-विरारच्या स्वायत्त विकासाची पायाभरणी, पाणी प्रश्न निराकरण व विवा शिक्षण संकुलांची निर्मिती.'
-              : 'Pioneered municipal autonomy, regional water security, and affordable decentralised higher education.'}
+              ? 'उपनगरीय रेल्वे फेऱ्या विस्तार, युवा कौशल्य विकास, १८५ दशलक्ष लिटर सूर्य पाणी योजना आणि क्रीडा सुविधा.'
+              : 'Championed 185 MLD Surya bulk treated water, suburban rail frequency modernization, and youth welfare.'}
           </p>
 
-          {/* Action Button: Explore Our Journey */}
+          {/* Action Button: Explore Constituencies */}
           <div className="pt-2">
             <button
-              onClick={onExploreStory}
-              className="inline-flex items-center gap-2 px-6 py-3.5 bg-[#0220A8] hover:bg-[#00177A] text-white text-xs font-bold uppercase tracking-widest rounded-xl shadow-lg shadow-blue-950/20 transition-all duration-300 group hover:translate-x-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FDF219] cursor-pointer"
+              onClick={handleConstituencyClick}
+              className="inline-flex items-center gap-2 px-5 py-3.5 bg-white hover:bg-slate-50 text-slate-800 text-xs font-bold uppercase tracking-wider rounded-xl border border-slate-300 hover:border-[#0220A8] transition-colors cursor-pointer shadow-xs"
             >
-              <span>{currentLang === 'mr' ? content.ctaPrimary.mr : content.ctaPrimary.en}</span>
-              <ArrowRight className="w-4 h-4 text-[#FDF219] group-hover:translate-x-1 transition-transform" />
+              <MapPin className="w-4 h-4 text-[#0220A8]" />
+              <span>{currentLang === 'mr' ? content.ctaSecondary.mr : content.ctaSecondary.en}</span>
             </button>
           </div>
         </div>
@@ -284,7 +285,7 @@ export const Hero: React.FC<HeroProps> = ({
           <div className="relative z-10 w-full flex items-end justify-center select-none">
             <img
               src="/bva_leaders_clean.png"
-              alt="Hitendra Thakur and Kshitij Thakur — Bahujan Vikas Aaghadi"
+              alt="Kshitij Thakur and Hitendra Thakur — Bahujan Vikas Aaghadi"
               className="w-auto h-auto max-h-[480px] lg:max-h-[550px] xl:max-h-[640px] 2xl:max-h-[700px] object-contain object-bottom transition-transform duration-500 hover:scale-[1.01] drop-shadow-[0_15px_35px_rgba(2,32,168,0.12)]"
               loading="eager"
               decoding="async"
@@ -301,7 +302,7 @@ export const Hero: React.FC<HeroProps> = ({
         </div>
 
         {/* =========================================================
-            ZONE 3 (RIGHT WING): KSHITIJ THAKUR (EXACT SAME WIDTH AS LEFT)
+            ZONE 3 (RIGHT WING): HITENDRA THAKUR (EXACT SAME WIDTH AS LEFT)
             ========================================================= */}
         <div
           style={{
@@ -314,49 +315,50 @@ export const Hero: React.FC<HeroProps> = ({
           {/* Identity Tag */}
           <div className="flex items-center justify-end gap-2">
             <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-blue-50 border border-blue-200 text-[#0220A8] text-[11px] font-bold uppercase tracking-wider">
-              <span>132-Nalasopara · Legislative</span>
-              <span className="w-2 h-2 rounded-full bg-[#0220A8] ring-2 ring-blue-300" />
+              <span>133-Vasai · Founder</span>
+              <span className="w-2 h-2 rounded-full bg-[#FDF219] ring-2 ring-[#0220A8]" />
             </div>
+            <BvaEmblem variant="badge" size={28} priority={true} />
           </div>
 
           {/* Accent Line Aligned Right */}
-          <div className="w-12 h-1 bg-[#0220A8] rounded-full ml-auto" />
+          <div className="w-12 h-1 bg-[#FDF219] rounded-full ml-auto" />
 
-          {/* Prominent Name: KSHITIJ THAKUR */}
+          {/* Prominent Name: HITENDRA THAKUR */}
           <div className="space-y-0.5">
-            <h2 className="text-3xl sm:text-4xl xl:text-5xl 2xl:text-[54px] font-black text-[#0220A8] tracking-tight leading-[0.92] uppercase font-display">
-              KSHITIJ
+            <h1 className="text-3xl sm:text-4xl xl:text-5xl 2xl:text-[54px] font-black text-[#0220A8] tracking-tight leading-[0.92] uppercase font-display">
+              HITENDRA
               <br />
               <span className="text-slate-900">THAKUR</span>
-            </h2>
+            </h1>
             <p className="text-base sm:text-lg font-bold text-[#0220A8] font-marathi pt-1">
-              {content.kshitij.nameMr}
+              {content.hitendra.nameMr}
             </p>
           </div>
 
           {/* Verified Role Pill */}
           <div className="flex justify-end">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-[#0220A8] text-xs font-bold shadow-2xs">
-              <CheckCircle2 className="w-3.5 h-3.5 text-[#0220A8]" />
-              <span>{currentLang === 'mr' ? 'माजी ३-वेळा आमदार (२००९–२०२४)' : 'Former 3-Term MLA (2009–2024)'}</span>
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-[#0220A8] text-xs font-bold shadow-2xs">
+              <CheckCircle2 className="w-3.5 h-3.5 text-[#EAB308]" />
+              <span>{currentLang === 'mr' ? 'संस्थापक · माजी ५-वेळा आमदार' : 'Founder · Former 5-Term MLA'}</span>
             </div>
           </div>
 
           {/* Supporting Sentence */}
           <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans max-w-xs ml-auto">
             {currentLang === 'mr'
-              ? 'उपनगरीय रेल्वे फेऱ्या विस्तार, युवा कौशल्य विकास, १८५ दशलक्ष लिटर सूर्य पाणी योजना आणि क्रीडा सुविधा.'
-              : 'Championed 185 MLD Surya bulk treated water, suburban rail frequency modernization, and youth welfare.'}
+              ? 'वसई-विरारच्या स्वायत्त विकासाची पायाभरणी, पाणी प्रश्न निराकरण व विवा शिक्षण संकुलांची निर्मिती.'
+              : 'Pioneered municipal autonomy, regional water security, and affordable decentralised higher education.'}
           </p>
 
-          {/* Action Button: Explore Constituencies */}
+          {/* Action Button: Explore Our Journey */}
           <div className="pt-2 flex justify-end">
             <button
-              onClick={handleConstituencyClick}
-              className="inline-flex items-center gap-2 px-5 py-3.5 bg-white hover:bg-slate-50 text-slate-800 text-xs font-bold uppercase tracking-wider rounded-xl border border-slate-300 hover:border-[#0220A8] transition-colors cursor-pointer shadow-xs"
+              onClick={onExploreStory}
+              className="inline-flex items-center gap-2 px-6 py-3.5 bg-[#0220A8] hover:bg-[#00177A] text-white text-xs font-bold uppercase tracking-widest rounded-xl shadow-lg shadow-blue-950/20 transition-all duration-300 group hover:-translate-x-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FDF219] cursor-pointer"
             >
-              <MapPin className="w-4 h-4 text-[#0220A8]" />
-              <span>{currentLang === 'mr' ? content.ctaSecondary.mr : content.ctaSecondary.en}</span>
+              <span>{currentLang === 'mr' ? content.ctaPrimary.mr : content.ctaPrimary.en}</span>
+              <ArrowRight className="w-4 h-4 text-[#FDF219] group-hover:translate-x-1 transition-transform" />
             </button>
           </div>
         </div>

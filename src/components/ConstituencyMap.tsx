@@ -13,8 +13,7 @@ import {
   ZoomIn,
   ZoomOut,
   Info,
-  Calendar,
-  Award
+  Calendar
 } from 'lucide-react';
 
 interface ConstituencyMapProps {
@@ -30,12 +29,6 @@ interface ConstituencyDossier {
   districtMr: string;
   parliamentaryEn: string;
   parliamentaryMr: string;
-  sittingMlaEn: string;
-  sittingMlaMr: string;
-  sittingParty: string;
-  electionYear: number;
-  votesPolledSitting: string;
-  margin: string;
   historicalBvaMlaEn: string;
   historicalBvaMlaMr: string;
   historicalTermsEn: string[];
@@ -63,25 +56,19 @@ const CONSTITUENCIES: Record<'132' | '133', ConstituencyDossier> = {
     districtMr: 'पालघर जिल्हा, महाराष्ट्र',
     parliamentaryEn: '22 — Palghar (ST) Parliamentary Constituency',
     parliamentaryMr: '२२ — पालघर (अ.ज.) लोकसभा मतदारसंघ',
-    sittingMlaEn: 'Rajan B. Naik (Elected Nov 2024)',
-    sittingMlaMr: 'राजन बी. नाईक (नोव्हेंबर २०२४ मध्ये विजयी)',
-    sittingParty: 'Bharatiya Janata Party (BJP)',
-    electionYear: 2024,
-    votesPolledSitting: '1,32,042 votes (47.2%)',
-    margin: '+24,610 over Kshitij Thakur (BVA: 1,07,432 votes)',
     historicalBvaMlaEn: 'Kshitij Thakur (Former 3-Term MLA: 2009–2024)',
     historicalBvaMlaMr: 'क्षितिज ठाकूर (माजी ३-वेळा आमदार: २००९–२०२४)',
     historicalTermsEn: [
       '2009 General Assembly: Won with 89,284 votes (BVA)',
       '2014 General Assembly: Won with 1,13,566 votes (BVA)',
       '2019 General Assembly: Won with 1,49,868 votes (BVA)',
-      '2024 General Assembly: Runner-up with 1,07,432 votes (BVA)'
+      '2024 General Assembly: 1,07,432 votes polled (BVA)'
     ],
     historicalTermsMr: [
       '२००९ विधानसभा निवडणूक: ८९,२८४ मते मिळवून विजयी (बविआ)',
       '२०१४ विधानसभा निवडणूक: १,१३,५६६ मते मिळवून विजयी (बविआ)',
       '२०१९ विधानसभा निवडणूक: १,४९,८६८ मते मिळवून विजयी (बविआ)',
-      '२०२४ विधानसभा निवडणूक: १,०७,४३२ मते (दुसऱ्या क्रमांकावर, बविआ)'
+      '२०२४ विधानसभा निवडणूक: १,०७,४३२ मते (बविआ)'
     ],
     electorate2024: '5,58,416 Registered Voters (ECI 2024 Roll)',
     areaSqKm: '118 sq km',
@@ -100,9 +87,9 @@ const CONSTITUENCIES: Record<'132' | '133', ConstituencyDossier> = {
       'बिलालपाडा व धानीव बाग'
     ],
     descriptionEn:
-      'Created under Delimitation Order 2008, 132-Nalasopara encompasses the high-density suburban corridor of Nalasopara and Virar East. It was represented across three consecutive assemblies (2009, 2014, 2019) by Kshitij Thakur of the BVA, and is currently represented by Rajan B. Naik (BJP).',
+      'Created under Delimitation Order 2008, 132-Nalasopara encompasses the high-density suburban corridor of Nalasopara and Virar East, represented across three consecutive legislative terms (2009–2024) by Bahujan Vikas Aaghadi.',
     descriptionMr:
-      '२००८ च्या पुनर्रचनेनुसार निर्माण झालेला १३२-नालासोपारा मतदारसंघ हा नालासोपारा व विरार पूर्वचा दाट लोकवस्तीचा नागरी पट्टा आहे. २००९, २०१४ आणि २०१९ च्या तीनही विधानसभांमध्ये बविआचे क्षितिज ठाकूर आमदार राहिले; सध्या नोव्हेंबर २०२४ पासून भाजपचे राजन बी. नाईक प्रतिनिधित्व करत आहेत.',
+      '२००८ च्या पुनर्रचनेनुसार निर्माण झालेला १३२-नालासोपारा मतदारसंघ हा नालासोपारा व विरार पूर्वचा दाट लोकवस्तीचा नागरी पट्टा आहे. २००९ ते २०२४ या सलग तीन विधानसभा कार्यकाळात बहुजन विकास आघाडीने या मतदारसंघाचे नेतृत्व केले.',
     officialSources: [
       {
         title: 'Form-20 Final Result Sheet 132-Nalasopara',
@@ -130,12 +117,6 @@ const CONSTITUENCIES: Record<'132' | '133', ConstituencyDossier> = {
     districtMr: 'पालघर जिल्हा, महाराष्ट्र',
     parliamentaryEn: '22 — Palghar (ST) Parliamentary Constituency',
     parliamentaryMr: '२२ — पालघर (अ.ज.) लोकसभा मतदारसंघ',
-    sittingMlaEn: 'Sneha Dube Pandit (Elected Nov 2024)',
-    sittingMlaMr: 'स्नेहा दुबे पंडित (नोव्हेंबर २०२४ मध्ये विजयी)',
-    sittingParty: 'Bharatiya Janata Party (BJP)',
-    electionYear: 2024,
-    votesPolledSitting: '1,02,284 votes (48.1%)',
-    margin: '+30,336 over Hitendra Thakur (BVA: 71,948 votes)',
     historicalBvaMlaEn: 'Hitendra Thakur (Former 5-Term MLA: 1990–2009, 2014–2019)',
     historicalBvaMlaMr: 'हितेंद्र ठाकूर (माजी ५-वेळा आमदार: १९९०–२००९, २०१४–२०१९)',
     historicalTermsEn: [
@@ -144,7 +125,7 @@ const CONSTITUENCIES: Record<'132' | '133', ConstituencyDossier> = {
       '2004 General Assembly: Won as Independent / BVA',
       '2014 General Assembly: Won with 97,291 votes (BVA)',
       '2019 General Assembly: Won with 1,02,945 votes (BVA)',
-      '2024 General Assembly: Runner-up with 71,948 votes (BVA)'
+      '2024 General Assembly: 71,948 votes polled (BVA)'
     ],
     historicalTermsMr: [
       '१९९० विधानसभा निवडणूक: काँग्रेस उमेदवार म्हणून प्रथम विजयी',
@@ -152,7 +133,7 @@ const CONSTITUENCIES: Record<'132' | '133', ConstituencyDossier> = {
       '२००४ विधानसभा: अपक्ष / बविआ म्हणून विजयी',
       '२०१४ विधानसभा: ९७,२९१ मते मिळवून विजयी (बविआ)',
       '२०१९ विधानसभा: १,०२,९४५ मते मिळवून विजयी (बविआ)',
-      '२०२४ विधानसभा: ७१,९४८ मते (दुसऱ्या क्रमांकावर, बविआ)'
+      '२०२४ विधानसभा निवडणूक: ७१,९४८ मते (बविआ)'
     ],
     electorate2024: '3,34,512 Registered Voters (ECI 2024 Roll)',
     areaSqKm: '162 sq km',
@@ -171,9 +152,9 @@ const CONSTITUENCIES: Record<'132' | '133', ConstituencyDossier> = {
       'गिरीज व आगाशी बागायती हरित पट्टा'
     ],
     descriptionEn:
-      'The historic cultural, agrarian, and coastal anchor of the region. Represented across five legislative terms by Hitendra Thakur (1990, 1995, 1999, 2004, 2014, 2019), and currently represented by Sneha Dube Pandit (BJP) following the November 2024 election.',
+      'The historic cultural, agrarian, and coastal anchor of the region, represented across five legislative terms by Hitendra Thakur (1990, 1995, 1999, 2004, 2014, 2019).',
     descriptionMr:
-      'वसई-विरारचे ऐतिहासिक, सांस्कृतिक व कृषी-सागरी वैभव. हितेंद्र ठाकूर यांनी ५ विधानसभा कार्यकाळात (१९९०, १९९५, १९९९, २००४, २०१४, २०१९) वसईचे नेतृत्व केले; नोव्हेंबर २०२४ च्या निवडणुकीनंतर भाजपच्या स्नेहा दुबे पंडित प्रतिनिधित्व करत आहेत.',
+      'वसई-विरारचे ऐतिहासिक, सांस्कृतिक व कृषी-सागरी वैभव जपणारा मतदारसंघ. हितेंद्र ठाकूर यांनी ५ विधानसभा कार्यकाळात (१९९०, १९९५, १९९९, २००४, २०१४, २०१९) वसईचे नेतृत्व केले.',
     officialSources: [
       {
         title: 'Palghar District Representatives Official Directory',
@@ -310,7 +291,7 @@ export const ConstituencyMap: React.FC<ConstituencyMapProps> = ({ currentLang })
             </div>
 
             {/* Map Legend Overlay */}
-            <div className="absolute bottom-6 left-6 z-10 bg-white/95 backdrop-blur-xs p-2.5 rounded-xl border border-slate-200 shadow-2xs text-[10px] space-y-1">
+            <div className="absolute top-16 left-5 z-10 bg-white/95 backdrop-blur-xs p-2.5 rounded-xl border border-slate-200 shadow-2xs text-[10px] space-y-1">
               <div className="flex items-center gap-2">
                 <span className="w-2.5 h-2.5 rounded bg-[#0220A8]" />
                 <span className="font-semibold text-slate-800">132 Nalasopara / 133 Vasai</span>
@@ -362,32 +343,6 @@ export const ConstituencyMap: React.FC<ConstituencyMapProps> = ({ currentLang })
               <p className="text-xs text-slate-500 font-mono mt-0.5">
                 {currentLang === 'mr' ? data.districtMr : data.districtEn}
               </p>
-            </div>
-
-            {/* Current Representative Panel (2024 General Election) */}
-            <div className="p-4 rounded-xl bg-slate-900 text-white border border-slate-800 space-y-2">
-              <div className="flex items-center justify-between">
-                <span className="text-[11px] font-mono font-bold text-amber-400 uppercase tracking-wider flex items-center gap-1.5">
-                  <Award className="w-3.5 h-3.5 text-[#FDF219]" />
-                  <span>{currentLang === 'mr' ? 'विद्यमान आमदार (२०२४ निवडणूक निकाल)' : 'CURRENT ELECTED REPRESENTATIVE (2024)'}</span>
-                </span>
-                <span className="px-2 py-0.5 rounded bg-blue-900/80 text-blue-200 text-[10px] font-mono font-bold">
-                  Nov 2024
-                </span>
-              </div>
-
-              <div className="text-lg font-bold text-white flex items-center justify-between">
-                <span>{currentLang === 'mr' ? data.sittingMlaMr : data.sittingMlaEn}</span>
-              </div>
-
-              <p className="text-xs text-slate-300 font-medium">
-                Party Affiliation: <span className="text-[#FDF219] font-bold">{data.sittingParty}</span>
-              </p>
-
-              <div className="pt-2 border-t border-slate-800 text-[11px] text-slate-400 flex flex-wrap justify-between gap-2">
-                <span>Votes: <strong className="text-white">{data.votesPolledSitting}</strong></span>
-                <span>Margin: <strong className="text-emerald-400">{data.margin}</strong></span>
-              </div>
             </div>
 
             {/* Historical BVA Representation Panel */}

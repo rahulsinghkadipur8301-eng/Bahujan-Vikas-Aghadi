@@ -131,7 +131,7 @@ export const InteractiveTimelineSection: React.FC<InteractiveTimelineSectionProp
               return (
                 <div
                   key={`${milestone.year}-${idx}`}
-                  className={`relative flex flex-col sm:flex-row items-center ${
+                  className={`relative flex flex-col sm:flex-row items-stretch sm:items-center ${
                     isEven ? 'sm:flex-row-reverse' : ''
                   } group`}
                 >
@@ -142,7 +142,7 @@ export const InteractiveTimelineSection: React.FC<InteractiveTimelineSectionProp
 
                   {/* Content Card (Balanced tight spacing) */}
                   <div
-                    className={`ml-10 sm:ml-0 w-full sm:w-[calc(50%-2rem)] ${
+                    className={`ml-10 sm:ml-0 w-[calc(100%-2.5rem)] sm:w-[calc(50%-2rem)] ${
                       isEven ? 'sm:text-left' : 'sm:text-left'
                     }`}
                   >

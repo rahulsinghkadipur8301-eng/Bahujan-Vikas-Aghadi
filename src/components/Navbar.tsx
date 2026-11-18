@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BvaEmblem } from './BvaEmblem';
-import { Menu, X, Sparkles, MapPin, Search, ShieldCheck } from 'lucide-react';
+import { Menu, X, Sparkles, MapPin, ShieldCheck } from 'lucide-react';
 import { PRIMARY_NAV_LINKS } from '../data/navSections';
 
 interface NavbarProps {
@@ -9,7 +9,7 @@ interface NavbarProps {
   activeSection: string;
   onNavigate: (sectionId: string) => void;
   onOpenAdmin: () => void;
-  onOpenSearch: () => void;
+  onOpenSearch?: () => void;
   onOpenCorrections: () => void;
   onOpenDocuments?: () => void;
 }
@@ -20,7 +20,6 @@ export const Navbar: React.FC<NavbarProps> = ({
   activeSection,
   onNavigate,
   onOpenAdmin,
-  onOpenSearch,
   onOpenCorrections,
   onOpenDocuments
 }) => {
@@ -65,95 +64,97 @@ export const Navbar: React.FC<NavbarProps> = ({
 
   return (
     <>
-      {/* Top Civic Identity Strip in Royal Logo Blue & Official Yellow */}
-      <div className="bg-[#0220A8] text-white text-xs sm:text-[13px] font-medium py-1.5 sm:py-2 px-4 sm:px-8 flex items-center justify-between border-b border-blue-900 tracking-wide select-none">
-        <div className="flex items-center gap-2.5 mx-auto sm:mx-0">
-          <span className="w-2.5 h-2.5 rounded-full bg-[#FDF219] ring-2 ring-white/40 animate-pulse" />
-          <span className="font-sans font-semibold">
-            {currentLang === 'mr'
-              ? 'बहुजन विकास आघाडी (BVA) · अधिकृत सार्वजनिक नोंदी व प्रत्यक्ष विकास कार्यावर आधारित'
-              : 'Bahujan Vikas Aaghadi (BVA) · Independent Research & Public Governance Archive'}
-          </span>
-        </div>
-        <div className="hidden md:flex items-center gap-4 text-blue-100 text-xs">
-          <span className="flex items-center gap-1.5 font-medium">
-            <MapPin className="w-3.5 h-3.5 text-[#FDF219]" />
-            <span>Palghar District · Vasai-Virar</span>
-          </span>
-          <span className="text-white/20">|</span>
-          <button
-            onClick={onOpenCorrections}
-            className="text-white hover:text-[#FDF219] flex items-center gap-1.5 font-bold cursor-pointer transition-colors"
-          >
-            <ShieldCheck className="w-4 h-4 text-emerald-400" />
-            <span>{currentLang === 'mr' ? 'तथ्य पडताळणी' : 'Evidence'}</span>
-          </button>
-          {onOpenDocuments && (
-            <>
-              <span className="text-white/20">|</span>
-              <button
-                onClick={onOpenDocuments}
-                className="text-white hover:text-[#FDF219] flex items-center gap-1.5 font-bold cursor-pointer transition-colors"
-              >
-                <span>{currentLang === 'mr' ? 'राजपत्रे' : 'Gazettes'}</span>
-              </button>
-            </>
-          )}
-          <span className="text-white/20">|</span>
-          <button
-            onClick={onOpenAdmin}
-            className="text-[#FDF219] hover:underline flex items-center gap-1.5 font-bold cursor-pointer"
-          >
-            <Sparkles className="w-4 h-4 text-[#FDF219]" />
-            <span>Demo CMS</span>
-          </button>
+      {/* Top Civic Identity Strip aligned identically with main navbar container */}
+      <div className="bg-[#0220A8] text-white text-[11px] sm:text-xs font-medium py-1.5 sm:py-2 border-b border-blue-900 tracking-wide select-none">
+        <div className="bva-container max-sm:px-3 flex items-center justify-between gap-4">
+          <div className="flex items-center gap-2 mx-auto md:mx-0 text-center md:text-left">
+            <span className="w-2 h-2 rounded-full bg-[#FDF219] ring-2 ring-white/40 animate-pulse shrink-0" />
+            <span className="font-sans font-semibold leading-snug">
+              {currentLang === 'mr'
+                ? 'बहुजन विकास आघाडी (BVA) · अधिकृत सार्वजनिक नोंदी व प्रत्यक्ष विकास कार्यावर आधारित'
+                : 'Bahujan Vikas Aaghadi (BVA) · Independent Research & Public Governance Archive'}
+            </span>
+          </div>
+          <div className="hidden md:flex items-center gap-4 text-blue-100 text-xs shrink-0">
+            <span className="flex items-center gap-1.5 font-medium whitespace-nowrap">
+              <MapPin className="w-3.5 h-3.5 text-[#FDF219]" />
+              <span>Palghar District · Vasai-Virar</span>
+            </span>
+            <span className="text-white/20">|</span>
+            <button
+              onClick={onOpenCorrections}
+              className="text-white hover:text-[#FDF219] flex items-center gap-1.5 font-bold cursor-pointer transition-colors whitespace-nowrap"
+            >
+              <ShieldCheck className="w-4 h-4 text-emerald-400" />
+              <span>{currentLang === 'mr' ? 'तथ्य पडताळणी' : 'Evidence'}</span>
+            </button>
+            {onOpenDocuments && (
+              <>
+                <span className="text-white/20">|</span>
+                <button
+                  onClick={onOpenDocuments}
+                  className="text-white hover:text-[#FDF219] flex items-center gap-1.5 font-bold cursor-pointer transition-colors whitespace-nowrap"
+                >
+                  <span>{currentLang === 'mr' ? 'राजपत्रे' : 'Gazettes'}</span>
+                </button>
+              </>
+            )}
+            <span className="text-white/20">|</span>
+            <button
+              onClick={onOpenAdmin}
+              className="text-[#FDF219] hover:underline flex items-center gap-1.5 font-bold cursor-pointer whitespace-nowrap"
+            >
+              <Sparkles className="w-4 h-4 text-[#FDF219]" />
+              <span>Demo CMS</span>
+            </button>
+          </div>
         </div>
       </div>
 
-      {/* Main Sticky Crisp White Navigation Bar (Substantially Enlarged & Authoritative) */}
+      {/* Main Sticky Crisp White Navigation Bar */}
       <header
         className={`sticky top-0 z-40 w-full bg-white/95 backdrop-blur-md transition-all duration-300 ${
           isScrolled
-            ? 'shadow-[0_6px_28px_rgba(2,32,168,0.10)] border-b border-slate-200 py-3 sm:py-3.5'
-            : 'border-b border-slate-200 py-4 sm:py-5 lg:py-5'
+            ? 'shadow-[0_6px_28px_rgba(2,32,168,0.10)] border-b border-slate-200 py-2.5 sm:py-3'
+            : 'border-b border-slate-200 py-3 sm:py-4 lg:py-4'
         }`}
       >
-        <div className="bva-container flex items-center justify-between">
-          {/* Left: Authentic Logo and Party Names - Substantially Enlarged */}
+        <div className="bva-container max-sm:px-3 flex items-center justify-between gap-2 sm:gap-4">
+          {/* Left: Authentic Logo and Exact 3-Line Party Name Format (Consistent across Mobile & Desktop) */}
           <button
             onClick={() => handleLinkClick('hero')}
-            className="flex items-center gap-3 sm:gap-4 text-left group transition-transform focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0220A8] cursor-pointer"
+            className="flex items-center gap-2 sm:gap-3.5 text-left group transition-transform focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0220A8] cursor-pointer shrink-0"
             aria-label="Bahujan Vikas Aaghadi Home"
           >
             <div className="transition-transform group-hover:scale-105 shrink-0 hidden sm:block">
               <BvaEmblem
                 variant="navbar"
-                size={isScrolled ? 70 : 86}
+                size={isScrolled ? 64 : 76}
                 priority={true}
               />
             </div>
             <div className="transition-transform group-hover:scale-105 shrink-0 sm:hidden">
               <BvaEmblem
                 variant="navbar"
-                size={isScrolled ? 46 : 56}
+                size={isScrolled ? 32 : 36}
                 priority={true}
               />
             </div>
             <div className="flex flex-col justify-center">
-              <span className="font-black text-slate-900 text-lg sm:text-2xl lg:text-[25px] tracking-tight leading-none font-marathi group-hover:text-[#0220A8] transition-colors">
+              <span className="font-black text-slate-900 text-[15px] sm:text-xl lg:text-[24px] tracking-tight leading-none font-marathi group-hover:text-[#0220A8] transition-colors whitespace-nowrap">
                 बहुजन विकास आघाडी
               </span>
-              <span className="text-[10px] sm:text-xs lg:text-[13px] font-black text-[#0220A8] tracking-widest font-sans uppercase mt-1">
+              <span className="text-[9px] sm:text-xs lg:text-[13px] font-black text-[#0220A8] tracking-[0.10em] sm:tracking-widest font-sans uppercase mt-0.5 sm:mt-1 whitespace-nowrap leading-none">
                 BAHUJAN VIKAS AAGHADI
               </span>
-              <span className="text-[9px] sm:text-[11px] text-slate-500 font-bold tracking-wider uppercase hidden sm:block mt-0.5">
+              <span className="text-[6.8px] sm:text-[10px] lg:text-[11px] text-slate-500 font-bold tracking-[0.03em] sm:tracking-wider uppercase mt-0.5 sm:mt-1 whitespace-nowrap leading-none">
                 VASAI · VIRAR · NALASOPARA · PALGHAR
               </span>
             </div>
           </button>
 
-          {/* Center: Desktop Navigation Links (Enlarged 15px font-extrabold with illuminated active pill) */}
-          <nav className="hidden xl:flex items-center gap-5 2xl:gap-7" aria-label="Main Navigation">
+          {/* Center: Desktop Navigation Links cleanly balanced */}
+          <nav className="hidden xl:flex items-center justify-center gap-5 2xl:gap-7" aria-label="Main Navigation">
             {PRIMARY_NAV_LINKS.map((link) => {
               const isActive = activeSection === link.id;
               return (
@@ -161,9 +162,9 @@ export const Navbar: React.FC<NavbarProps> = ({
                   key={link.id}
                   onClick={() => handleLinkClick(link.id)}
                   aria-current={isActive ? 'page' : undefined}
-                  className={`text-[14px] 2xl:text-[15px] font-extrabold tracking-wide transition-all py-1.5 relative uppercase cursor-pointer ${
+                  className={`text-[14px] 2xl:text-[15px] font-extrabold tracking-wide transition-all py-1.5 relative uppercase cursor-pointer whitespace-nowrap ${
                     isActive
-                      ? 'text-[#0220A8] scale-105'
+                      ? 'text-[#0220A8]'
                       : 'text-slate-600 hover:text-[#0220A8]'
                   }`}
                 >
@@ -176,28 +177,14 @@ export const Navbar: React.FC<NavbarProps> = ({
             })}
           </nav>
 
-          {/* Right Controls: Search, Language Switcher & Hamburger Menu */}
-          <div className="flex items-center gap-2 sm:gap-3">
-            {/* Global Search Button */}
-            <button
-              onClick={onOpenSearch}
-              className="px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl border border-slate-200 hover:border-[#0220A8] bg-slate-50 hover:bg-white text-slate-800 text-xs sm:text-sm font-bold flex items-center gap-2 transition-all cursor-pointer shadow-2xs min-h-[46px]"
-              title="Global Archive Search (⌘K)"
-              aria-label="Search Archive"
-            >
-              <Search className="w-4 h-4 text-[#0220A8]" />
-              <span className="hidden sm:inline font-bold">Search</span>
-              <kbd className="hidden md:inline text-[10px] font-mono bg-slate-200/80 px-1.5 py-0.5 rounded text-slate-600 font-semibold">
-                ⌘K
-              </kbd>
-            </button>
-
+          {/* Right Controls: Language Switcher & Mobile Hamburger Menu (Search button removed) */}
+          <div className="flex items-center gap-1.5 sm:gap-3 shrink-0">
             {/* Language Selector: Marathi and English Primary Toggle */}
-            <div className="flex items-center p-1 rounded-xl border border-slate-200 bg-slate-100 text-xs font-bold shadow-2xs">
+            <div className="flex items-center p-0.5 sm:p-1 rounded-xl border border-slate-200 bg-slate-100 text-xs font-bold shadow-2xs">
               <button
                 onClick={() => onSelectLang('mr')}
                 aria-label="मराठी भाषा निवडा"
-                className={`px-3 py-1.5 sm:py-2 rounded-lg font-bold text-xs sm:text-[13px] transition-all cursor-pointer min-h-[38px] ${
+                className={`px-2 sm:px-3.5 py-1.5 sm:py-2 rounded-lg font-bold text-[10.5px] sm:text-[13px] transition-all cursor-pointer min-h-[34px] sm:min-h-[38px] whitespace-nowrap ${
                   currentLang === 'mr' ? 'bg-[#0220A8] text-white shadow-xs' : 'text-slate-700 hover:text-slate-900'
                 }`}
               >
@@ -206,7 +193,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               <button
                 onClick={() => onSelectLang('en')}
                 aria-label="Select English Language"
-                className={`px-3 py-1.5 sm:py-2 rounded-lg font-bold text-xs sm:text-[13px] transition-all cursor-pointer min-h-[38px] ${
+                className={`px-2 sm:px-3.5 py-1.5 sm:py-2 rounded-lg font-bold text-[10.5px] sm:text-[13px] transition-all cursor-pointer min-h-[34px] sm:min-h-[38px] whitespace-nowrap ${
                   currentLang === 'en' ? 'bg-[#0220A8] text-white shadow-xs' : 'text-slate-700 hover:text-slate-900'
                 }`}
               >
@@ -214,15 +201,15 @@ export const Navbar: React.FC<NavbarProps> = ({
               </button>
             </div>
 
-            {/* Mobile Hamburger Menu Button (>= 46x46 px) */}
+            {/* Mobile Hamburger Menu Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="xl:hidden p-2.5 rounded-xl text-slate-800 hover:text-[#0220A8] hover:bg-slate-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0220A8] cursor-pointer min-h-[46px] min-w-[46px] flex items-center justify-center border border-slate-200"
+              className="xl:hidden p-2 rounded-xl text-slate-800 hover:text-[#0220A8] hover:bg-slate-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0220A8] cursor-pointer min-h-[40px] min-w-[40px] sm:min-h-[44px] sm:min-w-[44px] flex items-center justify-center border border-slate-200"
               aria-label="Toggle navigation menu"
               aria-expanded={mobileMenuOpen}
               aria-controls="mobile-navigation-drawer"
             >
-              {mobileMenuOpen ? <X className="w-6 h-6 text-[#0220A8]" /> : <Menu className="w-6 h-6" />}
+              {mobileMenuOpen ? <X className="w-5 h-5 sm:w-6 sm:h-6 text-[#0220A8]" /> : <Menu className="w-5 h-5 sm:w-6 sm:h-6" />}
             </button>
           </div>
         </div>
@@ -231,7 +218,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         {mobileMenuOpen && (
           <div
             id="mobile-navigation-drawer"
-            className="xl:hidden fixed inset-x-0 top-[calc(44px+78px)] bottom-0 bg-white/98 backdrop-blur-md z-50 border-b border-slate-200 shadow-2xl px-4 py-5 overflow-y-auto animate-in fade-in slide-in-from-top-2 duration-200"
+            className="xl:hidden fixed inset-x-0 top-[calc(44px+68px)] sm:top-[calc(44px+88px)] bottom-0 bg-white/98 backdrop-blur-md z-50 border-b border-slate-200 shadow-2xl px-4 py-5 overflow-y-auto animate-in fade-in slide-in-from-top-2 duration-200"
           >
             <div className="flex flex-col space-y-1 max-w-md mx-auto">
               <div className="pb-2 mb-2 border-b border-slate-100 flex items-center justify-between text-xs font-bold text-slate-500 uppercase tracking-wider">
