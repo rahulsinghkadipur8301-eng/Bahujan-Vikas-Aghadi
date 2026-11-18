@@ -1,0 +1,199 @@
+@import "tailwindcss";
+
+@theme {
+  /* BVA Official Brand Palette matching the uploaded logo: 
+     60% Crisp White (#FFFFFF), 
+     Deep Royal Blue / Violet-Blue (#0220A8), 
+     and Official Logo Yellow (#FDF219 / #FEF410) */
+  --color-bva-blue: #0220A8;
+  --color-bva-blue-dark: #00177A;
+  --color-bva-blue-deep: #00125A;
+  --color-bva-blue-light: #1E3EB8;
+  --color-bva-blue-subtle: #EEF2FF;
+
+  --color-bva-violet: #2A1B66;
+  --color-bva-violet-deep: #1A0E46;
+
+  --color-bva-yellow: #FDF219;
+  --color-bva-yellow-bright: #FEF410;
+  --color-bva-yellow-light: #FEF9C3;
+  --color-bva-yellow-pale: #FEFCE8;
+  --color-bva-yellow-gold: #EAB308;
+  --color-bva-yellow-border: #FDE047;
+
+  --color-bva-charcoal: #0F172A;
+  --color-bva-text: #1E293B;
+  --color-bva-muted: #64748B;
+  --color-bva-offwhite: #F8FAFC;
+  --color-bva-card: #FFFFFF;
+  --color-bva-border: #E2E8F0;
+
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-marathi: 'Mukta', 'Noto Sans Devanagari', sans-serif;
+  --font-display: 'Manrope', 'Mukta', sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    background-color: #FFFFFF;
+  }
+
+  body {
+    background-color: #FFFFFF;
+    color: #1E293B;
+    overflow-x: hidden;
+  }
+}
+
+/* Subtle dotted geographical background patterns (TVK-inspired reference) */
+.geo-dots-pattern {
+  background-image: radial-gradient(rgba(2, 32, 168, 0.08) 1.2px, transparent 1.2px);
+  background-size: 24px 24px;
+}
+
+.geo-dots-pattern-subtle {
+  background-image: radial-gradient(rgba(2, 32, 168, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.geo-dots-pattern-dark {
+  background-image: radial-gradient(rgba(253, 242, 25, 0.22) 1.2px, transparent 1.2px);
+  background-size: 24px 24px;
+}
+
+.geo-dots-pattern-yellow {
+  background-image: radial-gradient(rgba(234, 179, 8, 0.15) 1.2px, transparent 1.2px);
+  background-size: 22px 22px;
+}
+
+/* Responsive container system adhering to Phase 1 specs:
+   - At 1920px and larger: expands to 1600-1760px
+   - At 1440px: expands to 1250-1350px
+   - At 1024px: 90-94% of available width
+   - Mobile: 16-24px gutters
+*/
+.bva-container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .bva-container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .bva-container {
+    max-width: 94%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .bva-container {
+    max-width: 1320px;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .bva-container {
+    max-width: 1600px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .bva-container {
+    max-width: 1760px;
+  }
+}
+
+.bva-container-wide {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .bva-container-wide {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .bva-container-wide {
+    max-width: 96%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .bva-container-wide {
+    max-width: 1380px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .bva-container-wide {
+    max-width: 1640px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .bva-container-wide {
+    max-width: 1800px;
+  }
+}
+
+/* Custom scrollbar styling in Royal Logo Blue */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0220A8;
+}
+
+/* Subtle image mask and reveal keyframes */
+@keyframes bvaFadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bvaDrawLine {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+.animate-bva-fade-in {
+  animation: bvaFadeIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Bahujan Vikas Aaghadi (BVA) — Digital Portal",
+  "description": "Cinematic, documentary-style responsive website for Bahujan Vikas Aaghadi (BVA), representing Vasai, Virar, Nalasopara, and Palghar district.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

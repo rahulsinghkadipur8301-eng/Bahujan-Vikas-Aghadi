@@ -1,0 +1,1082 @@
+# MASTER WEBSITE DEVELOPMENT PROMPT
+## BAHUJAN VIKAS AAGHADI (BVA) — THE ULTIMATE INTERACTIVE POLITICAL ARCHIVE
+
+### YOUR ROLE
+
+Act as an elite multidisciplinary team consisting of:
+
+- Award-winning creative director and art director
+- Senior full-stack engineer
+- Expert 3D and motion designer
+- GSAP animation specialist
+- Data visualisation engineer
+- Political researcher and fact-checker
+- UI/UX architect
+- Interactive cartography specialist
+- Editorial designer
+- Accessibility, security and performance engineer
+
+**Your task is to create one of the most visually impressive, interactive, information-rich regional political websites in India.**
+
+Build a complete, production-quality website focused on **Bahujan Vikas Aaghadi (BVA / बहुजन विकास आघाडी)**, the political party founded and led by Hitendra Thakur in Maharashtra's Vasai–Virar region.
+
+The website must combine the immersive visual quality of an award-winning digital documentary, the information density of a political encyclopedia, and the utility of a professional research database.
+
+This must be a real, responsive, functional website—not a static mockup, generic political template or unfinished demonstration.
+
+---
+
+# 1. CORE CREATIVE VISION
+
+### Concept: "THE STORY OF A REGION. THE STORY OF A PARTY."
+
+The website tells BVA's story through animated political history, people, places, elections, achievements, controversies and changing political influence.
+
+The visitor should feel as though they are exploring a living documentary.
+
+**The visual experience must be extraordinary, but the information must remain trustworthy and easy to access.**
+
+Every major page and scroll section should introduce purposeful animation.
+
+The website should feature:
+
+- Cinematic fullscreen imagery
+- Depth-based parallax
+- Scroll-controlled storytelling
+- Carefully choreographed page transitions
+- 3D visual elements
+- Animated photography masks
+- Dynamic maps
+- Morphing charts
+- Magnetic buttons
+- Responsive typography animations
+- Interactive political timelines
+- Smooth horizontal and vertical transitions
+- Animated article and profile layouts
+- Floating image compositions
+- Subtle particle and atmospheric effects
+- Sophisticated hover interactions
+- Motion-driven navigation
+- Fullscreen editorial presentations
+- Context-sensitive loading sequences
+- A website-wide scroll progress indicator
+
+Avoid repetitive fade-in animations. Each major section should have a distinctive motion concept.
+
+Motion should communicate hierarchy, historical progression, relationships and changes over time.
+
+---
+
+# 2. VISUAL DESIGN SYSTEM
+
+### Design personality
+
+Create an aesthetic that is:
+
+- Powerful
+- Cinematic
+- Authoritative
+- Contemporary
+- Elegant
+- Editorial
+- Premium
+- Technologically sophisticated
+- Visually memorable
+
+Use the visual refinement of a premium international publication or documentary studio.
+
+### Colour palette
+
+Primary:
+- Deep black: #0B0B0D
+- Charcoal: #15171B
+- Soft ivory: #F7F5EF
+- Pure white: #FFFFFF
+
+Accent:
+- Rich political yellow: #F4C430
+- Warm gold: #D9A629
+
+Use yellow or gold in approximately **20% of the visual design**, concentrated in highlights, interaction states, indicators, important statistics and selected backgrounds.
+
+Use black, ivory and white for most content to maintain readability.
+
+### Typography
+
+Use a deliberate typography pairing:
+
+- Large condensed display typography for cinematic headings.
+- Refined sans-serif typography for body content.
+- A readable Devanagari font for Marathi and Hindi.
+- Monospaced or tabular numerals for statistics and election data.
+
+Make major headlines visually commanding.
+
+Examples:
+
+"THREE DECADES OF POLITICAL HISTORY."
+
+"THE PEOPLE BEHIND THE PARTY."
+
+"FROM VASAI TO VIRAR."
+
+"POWER. POLITICS. PUBLIC LIFE."
+
+### Assets and identity
+
+Preserve the official BVA name, supplied logo and approved political symbols exactly.
+
+Do not invent, redraw or alter official logos without permission.
+
+Use the whistle election symbol only with the correct historical and election-specific context.
+
+Use verified real photographs of political figures and political events with appropriate rights and attribution.
+
+Never generate fake documentary photographs of actual events or misleading portraits of real people.
+
+If an image cannot be verified or licensed, use a clearly marked editorial placeholder or a non-deceptive abstract illustration.
+
+---
+
+# 3. TECHNOLOGY STACK
+
+Use the latest mutually compatible stable versions of:
+
+- Next.js with TypeScript
+- Tailwind CSS
+- GSAP and ScrollTrigger
+- Lenis for smooth scrolling
+- Motion for React for interface transitions
+- Three.js / React Three Fiber for selected immersive experiences
+- MapLibre GL or another suitable map system
+- ECharts or another advanced data visualisation library
+- A structured database such as PostgreSQL
+- A headless content management system
+- Secure media storage and image optimisation
+
+Avoid conflicting scroll engines or competing animation systems.
+
+Use GSAP as the primary scroll-animation orchestrator. Use Motion for smaller interface transitions.
+
+Use Three.js only where it materially improves the experience.
+
+All charts, maps, search controls, filters and profile links must work.
+
+The architecture must be component-based, maintainable and suitable for future content expansion.
+
+---
+
+# 4. WEBSITE STRUCTURE
+
+Create the following primary routes:
+
+1. Home
+2. About BVA
+3. Complete Political History
+4. Leadership
+5. All Members
+6. Individual Member Profiles
+7. Election History
+8. Interactive Political Map
+9. Governance and Development
+10. Political Alliances and Rivalries
+11. Incidents and Controversies
+12. Legal and Public Records
+13. News and Updates
+14. Photo and Video Archive
+15. Documents and Publications
+16. Contact and Information
+
+Do not force the entire political archive onto a single enormous homepage.
+
+Create a cinematic homepage that links to comprehensive, searchable inner pages.
+
+Each major section should have its own visual personality while maintaining a unified design system.
+
+---
+
+# 5. HOMEPAGE — THE CINEMATIC EXPERIENCE
+
+## SECTION 1: IMMERSIVE HERO
+
+Build a fullscreen cinematic opening.
+
+Background:
+A layered, authentic photographic composition representing Vasai, Virar, Nalasopara and the region's public life.
+
+Incorporate subtle atmospheric effects, depth and photographic movement.
+
+Foreground:
+An editorial heading:
+
+**BAHUJAN VIKAS AAGHADI**
+
+Subtitle:
+
+"THE PEOPLE. THE HISTORY. THE POLITICS."
+
+Supporting text:
+
+"Explore the people, elections, institutions and events that have shaped the political history of Vasai–Virar."
+
+### Hero animation sequence
+
+1. Background fades from darkness.
+2. Cinematic image layers move at different speeds.
+3. A subtle yellow line traces across the screen.
+4. The main headline reveals letter by letter through a mask.
+5. Supporting typography appears in a choreographed stagger.
+6. Three-dimensional visual elements shift gently with pointer movement on capable desktop devices.
+7. A refined scroll indicator appears.
+8. As the visitor scrolls, the hero contracts and transitions seamlessly into the historical story.
+
+Include a primary button:
+
+"EXPLORE THE STORY"
+
+And a secondary link:
+
+"VIEW ELECTION DATA"
+
+Make the buttons magnetic on desktop, with refined hover transformations.
+
+Do not autoplay audio.
+
+## SECTION 2: THE REGION IN NUMBERS
+
+Display verified current statistics in premium animated tiles:
+
+- Municipal corporators
+- Assembly representation
+- Lok Sabha representation
+- Municipal election year
+- Years of documented political history
+- Number of major elections in the archive
+
+As of the initial research baseline, BVA won 71 of the 115 seats in the January 2026 Vasai–Virar municipal election and holds no Assembly or Lok Sabha seat.
+
+Show the source and verification date beside each statistic.
+
+Animation:
+Large numbers roll into position as they enter the viewport.
+
+The cards should use subtle depth, illuminated edges, responsive layouts and precise number transitions.
+
+## SECTION 3: WHO IS BVA?
+
+Create an animated editorial introduction.
+
+Use a split layout:
+
+Left:
+Historical photographs, party visuals and image panels.
+
+Right:
+Verified explanation of the party's identity, origins, regional focus and leadership.
+
+Animation:
+Images enter through layered clipping masks while content panels slide into place.
+
+Include a prominent link to the full party history.
+
+## SECTION 4: THE FOUNDER
+
+Feature Hitendra Vishnu Thakur in a dedicated cinematic profile section.
+
+Use a verified portrait with appropriate image rights.
+
+Present:
+
+- Full name
+- Background and education
+- Political beginnings
+- Congressional association
+- Independent electoral career
+- Role in developing BVA
+- Assembly election history
+- Major political milestones
+- Publicly documented business and institutional associations
+- Significant controversies and their legal status
+- Present political position
+
+Animation:
+Create a sophisticated profile sequence in which a portrait remains pinned while major historical years and verified facts transition through the foreground.
+
+On mobile, convert the sequence into lightweight stacked cards.
+
+Link to the complete biography.
+
+---
+
+# 6. COMPLETE POLITICAL HISTORY
+
+This must be one of the website's signature experiences.
+
+Create a dedicated fullscreen interactive timeline.
+
+Cover the major periods:
+
+- 1988–1990: Hitendra Thakur's early political career
+- The 1990 Assembly victory
+- Subsequent independent electoral victories
+- The Vasai Vikas Aaghadi period
+- ECI documentation from March 2007
+- Maharashtra SEC registration in June 2008
+- The 2009 Palghar parliamentary victory
+- The 2009 Assembly elections
+- Formation of VVCMC
+- The 2010 municipal election
+- The 2013 legislative controversy involving Kshitij Thakur
+- The 2014 Assembly elections
+- The 2015 municipal election
+- The 2019 Assembly election and coalition politics
+- The 2021 Viva Group investigation
+- The 2022 Rajya Sabha political shift
+- The 2024 Assembly defeats
+- The November 2024 Virar cash controversy
+- The 2025 defections and investigations
+- The January 2026 municipal comeback
+- The 2026 committee elections and civic disputes
+
+### Timeline animation
+
+Use scroll-controlled horizontal progression on desktop.
+
+Each historical event becomes a scene containing:
+
+- Year
+- Event title
+- Relevant image
+- Short explanation
+- Important individuals
+- Outcome
+- Source attribution
+- Link to full event details
+
+Make historical photographs reveal through masks as the visitor moves along the timeline.
+
+Use animated lines and year markers to emphasise the passage of time.
+
+Provide:
+
+- Timeline filters
+- Decade navigation
+- Election-only view
+- Controversy-only view
+- Legal-history view
+- Direct links to each event
+
+Offer a normal chronological list as an accessible alternative.
+
+---
+
+# 7. LEADERSHIP AND MEMBER DATABASE
+
+This is a mission-critical part of the project.
+
+Do not create a basic team section with ten photographs.
+
+Build a **complete searchable political leadership and membership information system** using verified public records.
+
+Separate:
+
+- Current party officials
+- Former party officials
+- Elected municipal corporators
+- Former MLAs
+- Former MPs
+- Mayors and former mayors
+- Committee chairpersons
+- Committee members
+- Historically significant organisers
+- Members who subsequently changed parties
+
+Never label a former member as a current office-bearer without verifying their present affiliation.
+
+### Initial prominent figures
+
+Research and create profiles for:
+
+- Hitendra Vishnu Thakur
+- Kshitij Hitendra Thakur
+- Rajesh Raghunath Patil
+- Baliram Sukur Jadhav
+- Ajiv Yashwant Patil
+- Marshal Dominic Lopis
+- Pravin Chinnayya Shetty
+- Prafulla Jagannath Sane
+- Prashant Raut
+- Sadanand Gajanan Patil
+- Narendra Vasant Patil
+- Pankaj Patil
+- Nilesh Damodar Deshmukh
+- Ranjana Thalekar
+- Laurel Dias
+- Sunil Acholekar
+- Bina Michael Furtado
+- Nishad Choraghe
+- Suvarna Patil
+- Kanhaiya Bhoir
+- Sachin Desai
+- Atul Salunkhe
+- Sangeeta Bhere
+- Kalpesh Mankar
+- Prakash Rodrigues
+- Afif Sheikh
+- Rajeev Patil, marked as a former BVA leader
+- Pravina Thakur, with her historical mayoral role
+
+Use authoritative current sources to validate every name and role.
+
+### Sadanand Patil's profile
+
+Create a detailed profile for Sadanand Gajanan Patil.
+
+Include verified information:
+
+- BVA affiliation
+- Historical municipal service
+- Ward 1D victory in January 2026
+- 11,016 votes received
+- 3,182-vote winning margin
+- Past election involvement
+- Municipal responsibilities
+- Available historical election affidavits
+- Any verified current committee appointments
+- Relevant public events
+
+When discussing historical legal disclosures, show the disclosure year and distinguish charges, allegations, acquittals and convictions.
+
+Do not imply that old cases are still pending without current evidence.
+
+### Individual profile pages
+
+Every verified person must receive a dynamic profile route.
+
+For each person, include:
+
+1. Full name and alternate spellings
+2. Verified photograph
+3. Party affiliation and its dates
+4. Current or historical status
+5. Present position, if verified
+6. Previous positions
+7. Electoral constituency or municipal seat
+8. Political career timeline
+9. Election results
+10. Committee appointments
+11. Major public statements
+12. Development work with supporting records
+13. Publicly declared assets, identified by affidavit year
+14. Public legal proceedings, accurately labelled
+15. Publicly relevant family and institutional connections
+16. Sources and last verification date
+
+### Directory interface
+
+Include:
+
+- Instant name search
+- Marathi and English name matching
+- Filters by ward
+- Filters by current or former status
+- Filters by position
+- Filters by election year
+- Alphabetical listing
+- Interactive card/grid view
+- Detailed table view
+
+Animate directory cards with staggered reveals, image-mask transitions and subtle hover depth.
+
+Do not invent photographs or biographical facts for members whose records are incomplete.
+
+---
+
+# 8. INTERACTIVE POLITICAL GEOGRAPHY
+
+Create a major dedicated map experience.
+
+Use official constituency and municipal boundary data.
+
+Cover:
+
+- Vasai
+- Virar
+- Nalasopara
+- Boisar
+- Palghar
+- Relevant municipal electoral wards
+
+Do not invent constituency shapes.
+
+### Map interactions
+
+Visitors must be able to:
+
+- Zoom and pan
+- Select an Assembly constituency
+- Select a municipal ward
+- See the current elected representative
+- See verified election results
+- View historical political changes
+- Open profiles from map markers
+- Filter between municipal and Assembly boundaries
+
+Animate constituency boundaries when selected.
+
+Use tasteful highlighted strokes, progressive map reveals and smooth camera transitions.
+
+Provide a clear, accessible list-based alternative.
+
+---
+
+# 9. ELECTION INTELLIGENCE DASHBOARD
+
+Build a professional election analysis environment.
+
+Include separate views for:
+
+- Municipal elections
+- Maharashtra Assembly elections
+- Lok Sabha elections
+
+### Municipal history
+
+Initial verified baseline:
+
+- 2010: BVA won 55 of 89 municipal seats.
+- 2015: Contemporary election reporting recorded 106 of 115 seats.
+- 2026: BVA won 71 of 115 seats.
+
+### Assembly history
+
+Include verified constituency-level results for 2009, 2014, 2019 and 2024.
+
+### Interactive charts
+
+Build:
+
+- Seat-share comparisons
+- Vote-share trends
+- Constituency performance
+- Candidate vote comparisons
+- Winning margins
+- Historical timelines
+- Party-versus-party comparisons
+- Ward-wise election tables
+- Turnout and electoral participation where available
+
+Animate charts as they enter view.
+
+Use morphing bars, smooth line drawing and responsive numerical transitions.
+
+All figures must be drawn from verified election records.
+
+Show a source and date for each dataset.
+
+Never create simulated votes or fake political projections.
+
+---
+
+# 10. GOVERNANCE, DEVELOPMENT AND PUBLIC PROJECTS
+
+Create an evidence-based development archive.
+
+Major categories:
+
+- Water supply
+- Roads and connectivity
+- Public transport
+- Education
+- Healthcare
+- Sanitation
+- Drainage
+- Parks and recreation
+- Cultural programmes
+- Housing and urban development
+- Environmental management
+
+### Project detail pages
+
+Each project should include:
+
+- Project name
+- Location
+- Responsible authority
+- Announced cost
+- Revised cost, where applicable
+- Announcement date
+- Construction or implementation dates
+- Present verified status
+- Photographs
+- Public documents
+- Reported benefits
+- Reported concerns
+- Source references
+
+Crucial rule:
+
+Do not automatically credit BVA with every project located in Vasai–Virar.
+
+Distinguish municipal work, MMRDA projects, state government projects, central government schemes and activities of independent institutions.
+
+### Animation
+
+Use before-and-after image sliders where genuine comparable images are available.
+
+Animate project timelines, geographical locations and progress indicators.
+
+Never invent a completion percentage.
+
+---
+
+# 11. POLITICAL CONTROVERSIES AND LEGAL HISTORY
+
+Create a serious, professionally designed section for documented controversies.
+
+Do not sensationalise.
+
+Include independently researched coverage of:
+
+- The historical Suresh Dube murder proceedings and subsequent court history
+- The 2009 village protests concerning the municipal corporation
+- The 2013 Kshitij Thakur police assault controversy
+- The 2021 Viva Group ED investigation
+- The November 2024 Vinod Tawde cash controversy
+- The 2025 VVCMC illegal-construction investigation
+- Relevant municipal governance allegations
+- The 2026 BVA–BJP confrontations
+- The 2026 ward-committee restructuring dispute
+
+### Strict factual presentation
+
+Every case must clearly distinguish:
+
+- Allegation
+- FIR
+- Investigation
+- Arrest
+- Charges
+- Trial
+- Acquittal
+- Conviction
+- Appeal
+- Latest verified court status
+
+Provide links to original court orders and official statements wherever available.
+
+Display competing claims fairly.
+
+Do not treat an allegation as established guilt.
+
+Do not publish rumours, private information or unverified personal accusations.
+
+### Design
+
+Use dark editorial layouts, restrained imagery, strong timelines and expandable source panels.
+
+Avoid sensational crime-themed graphics.
+
+---
+
+# 12. ALLIANCES AND POLITICAL RELATIONSHIPS
+
+Create an interactive relationship explorer covering BVA's publicly documented political relationships.
+
+Include historical interactions with:
+
+- Indian National Congress
+- BJP
+- Shiv Sena
+- NCP
+- Maha Vikas Aghadi
+- Other relevant regional organisations
+
+Explain how relationships changed across elections and government-formation periods.
+
+Use a dynamic network diagram with nodes representing parties and leaders.
+
+When selecting a relationship, display:
+
+- Date
+- Event
+- Nature of alliance or support
+- Relevant participants
+- Evidence
+- Political outcome
+
+Distinguish formal alliances from voting support and informal political cooperation.
+
+---
+
+# 13. NEWS AND PUBLIC DOCUMENT ARCHIVE
+
+Build a searchable information centre.
+
+### News archive
+
+Allow visitors to browse verified news by:
+
+- Date
+- Topic
+- Person
+- Election
+- Geography
+- Political party
+- Development project
+
+Each article should display the publication, original date, source and fact-checking status.
+
+Do not copy entire copyrighted news articles.
+
+Use short summaries, original analysis and links to source material.
+
+### Documents archive
+
+Include categories for:
+
+- Election results
+- Candidate affidavits
+- Party registration records
+- Party financial disclosures
+- Municipal budgets
+- Committee appointments
+- Government resolutions
+- Court judgments
+- Public project reports
+
+Support PDF viewing, document search and citation links.
+
+Provide an editorial corrections log.
+
+---
+
+# 14. PREMIUM PHOTO AND VIDEO EXPERIENCE
+
+Create an immersive multimedia archive.
+
+Categories:
+
+- Political history
+- Public meetings
+- Elections
+- Municipal leadership
+- Local development
+- Cultural activities
+- Public events
+- Historical photographs
+
+### Photo gallery animation
+
+Use an editorial masonry grid.
+
+Features:
+
+- Images progressively revealed through masks
+- Smooth zoom on hover
+- Image captions
+- Source and photographer credits
+- Fullscreen lightbox
+- Keyboard navigation
+- Image loading transitions
+
+Include panoramic photography only when authentic assets exist.
+
+Use correctly sized, optimised derivatives of high-resolution images.
+
+---
+
+# 15. GLOBAL ANIMATION SYSTEM — EXTREMELY IMPORTANT
+
+The entire website should feel like one carefully directed cinematic experience.
+
+### Scroll motion
+
+Implement a coherent library of scroll animations:
+
+1. Parallax image movement
+2. Pinned sections
+3. Horizontal timeline scrolling
+4. Image-mask reveals
+5. Split-text reveals
+6. Character stagger animations
+7. Layered card stacks
+8. Smooth counter animations
+9. Perspective-based transitions
+10. Animated SVG line drawing
+11. Map boundary tracing
+12. Section colour transitions
+13. Background image scaling
+14. Depth-based foreground movement
+15. Responsive chart reveals
+16. Sequential information panels
+17. Cinematic page transitions
+18. Elegant hover and focus animations
+19. Controlled 3D rotation
+20. Scroll-linked progress indicators
+
+**Every major scroll section must have a choreographed animation sequence.**
+
+Do not merely attach the same effect to every element.
+
+Build a central motion system with reusable components such as:
+
+- CinematicSection
+- ParallaxMedia
+- RevealText
+- MaskedImage
+- StaggeredGrid
+- PinnedTimeline
+- AnimatedStatistic
+- InteractiveMap
+- ScrollProgress
+- PageTransition
+- MagneticButton
+- AnimatedProfileCard
+
+### Background effects
+
+Different sections should use varied backgrounds:
+
+- Animated gradients
+- Subtle grain texture
+- Layered photographs
+- Gentle parallax geometry
+- Soft spotlight effects
+- Fine-grid overlays
+- Controlled particle fields
+- Animated map coordinates
+- Cinematic dark-to-light transitions
+
+Effects must remain subtle enough for long-form reading.
+
+Avoid constant distracting movement behind paragraphs.
+
+### Navigation animation
+
+Create an elegant, responsive navigation bar.
+
+Desktop:
+- Logo left
+- Main links centred
+- Search and language controls right
+- Animated active-link underline
+- Dropdown and mega-menu transitions
+- Scroll-responsive navbar
+
+Mobile:
+- Smooth fullscreen menu
+- Distinct menu-item reveals
+- Readable touch targets
+- No hover-only navigation
+
+Add a global search shortcut.
+
+### Interaction standards
+
+Every button, filter, slider and search input must perform its advertised action.
+
+Every animation should respond reliably to resizing and route changes.
+
+Do not create fake controls or non-functional interactions.
+
+---
+
+# 16. PERFORMANCE AND ACCESSIBILITY
+
+The animations must not make the website slow.
+
+Target:
+
+- Smooth 60 FPS interaction on suitable devices
+- Largest Contentful Paint below 2.5 seconds on representative production tests
+- Interaction to Next Paint below 200 ms
+- Cumulative Layout Shift below 0.1
+
+Use:
+
+- Lazy-loaded images
+- Optimised AVIF/WebP assets
+- Responsive image sizes
+- Code splitting
+- GPU-friendly transforms
+- ScrollTrigger cleanup
+- Selective Three.js loading
+- Minimal unnecessary blur and shadow layers
+- Device-aware effect quality
+
+Respect the user's reduced-motion preference.
+
+On lower-powered mobile devices, simplify the animations while preserving excellent visual design.
+
+Provide keyboard access, visible focus states, descriptive alt text and sufficient colour contrast.
+
+All important information must remain usable when animations are disabled.
+
+---
+
+# 17. MULTILINGUAL SUPPORT
+
+Build for:
+
+- English
+- Marathi
+- Hindi
+
+Marathi should be treated as a first-class language, not a decorative translation.
+
+Use proper Devanagari typography and authentic political terminology.
+
+Preserve correct spellings of names and constituencies.
+
+Use locale-specific URLs, metadata and search.
+
+If a translation has not been reviewed, show its status instead of silently publishing uncertain wording.
+
+---
+
+# 18. BACKEND AND ADMINISTRATION
+
+Create a secure content management dashboard.
+
+Authorised administrators should be able to:
+
+- Create and update member profiles
+- Upload approved photographs
+- Add historical events
+- Update elections and datasets
+- Add development projects
+- Publish articles
+- Upload public documents
+- Correct factual errors
+- Manage translations
+- Update committee roles
+- Mark individuals as former members
+- Maintain source references
+
+Implement role-based permissions, secure authentication, input validation, audit logs and editorial review.
+
+Do not automatically publish scraped or AI-generated factual claims.
+
+Use an approval workflow for sensitive legal, financial and biographical content.
+
+The public website should show when important records were last updated.
+
+---
+
+# 19. RESEARCH REQUIREMENTS
+
+Before finalising the site's content, independently verify facts using primary and reliable published sources.
+
+Initial source directory:
+
+- Maharashtra State Election Commission: https://mahasec.maharashtra.gov.in/
+- Vasai–Virar City Municipal Corporation: https://vvcmc.in/
+- Election Commission of India: https://www.eci.gov.in/
+- Association for Democratic Reforms: https://www.myneta.info/
+- Public court records: https://indiankanoon.org/
+- Historical BVA website: https://bahujanvikasaghadi.com/
+
+Also consult reputable reporting from sources such as The Indian Express, Loksatta, Hindustan Times and other credible regional publications.
+
+Verify all current positions against the latest available records.
+
+Do not conflate BVA with Vanchit Bahujan Aghadi.
+
+Use **3 November 2026** as the initial research cutoff. Later events must not be presented as having already occurred.
+
+Where public records conflict, display the competing figures and explain the discrepancy.
+
+Mark uncertain information as unverified.
+
+Maintain a clear distinction between documented facts, source claims and editorial interpretation.
+
+---
+
+# 20. SEARCH ENGINE OPTIMISATION
+
+Implement complete technical SEO:
+
+- Unique titles and meta descriptions
+- Structured data for people and articles
+- Canonical URLs
+- XML sitemap
+- Open Graph images
+- Social sharing previews
+- Semantic headings
+- Accessible navigation
+- Localised metadata
+- Fast-loading pages
+- Searchable public records
+
+Optimise pages for accurate informational searches about BVA, its history, Vasai–Virar politics, leaders, members and elections.
+
+Do not use fabricated testimonials or misleading political claims.
+
+---
+
+# 21. FINAL QUALITY EXPECTATIONS
+
+The result must look like a premium custom-designed website commissioned by a major documentary publication or research institution.
+
+Absolutely avoid:
+
+- Generic political website templates
+- Excessive unrelated slogans
+- Repetitive stock imagery
+- Flat, lifeless sections
+- Low-quality animations
+- Fake portraits
+- Invented achievements
+- Unverified membership lists
+- Unsupported legal claims
+- Empty placeholder pages
+- Broken links
+- Non-functional search or filters
+- Horizontal overflow
+- Animations that obstruct reading
+- Unnecessary loading screens
+
+Do not publish the site as BVA's official website unless affiliation and permission have been established. Otherwise identify it clearly as an independent informational archive.
+
+### Final delivery requirements
+
+Produce:
+
+1. A fully functional responsive website.
+2. All major pages and routes.
+3. A polished cinematic homepage.
+4. Reusable animation components.
+5. An interactive election dashboard.
+6. A working member directory.
+7. Individual leader profile pages.
+8. An accurate interactive geography section.
+9. A historical timeline.
+10. A source-backed controversy and legal archive.
+11. A searchable documents section.
+12. A secure editorial administration system.
+13. A complete design system.
+14. Optimised mobile and desktop experiences.
+15. Clear source attribution and correction mechanisms.
+
+### Final creative instruction
+
+**Make the website feel alive.**
+
+Every scroll should reveal another layer of the political story.
+
+Every photograph should have depth.
+
+Every important number should communicate change.
+
+Every historical event should be engaging to explore.
+
+Every transition should feel intentional.
+
+Every detail should reinforce the site's credibility and visual identity.
+
+The goal is not merely to produce a beautiful BVA website.
+
+**The goal is to create a visually extraordinary, deeply researched, trustworthy and continually maintainable digital record of Bahujan Vikas Aaghadi and the political history of Vasai–Virar.**
+
+Build the complete experience to an exceptional professional standard.
